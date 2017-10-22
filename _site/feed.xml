@@ -5,51 +5,81 @@
     <description>欢迎来到我的个人站~</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Oct 2017 18:24:31 +0800</pubDate>
-    <lastBuildDate>Sun, 22 Oct 2017 18:24:31 +0800</lastBuildDate>
+    <pubDate>Sun, 22 Oct 2017 22:37:49 +0800</pubDate>
+    <lastBuildDate>Sun, 22 Oct 2017 22:37:49 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
-        <title>test</title>
-        <description>&lt;p&gt;#十一八天假期就这么没有了 * $GGGGGGGGG$&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;尽快；ss;ss&lt;/li&gt;
-  &lt;li&gt;
-    &lt;hr /&gt;
+        <title>运用aria2c下载百度云内容</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;安装aria2
+  dnf install aria2&lt;/li&gt;
+  &lt;li&gt;配置aria2
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &lt;span class=&quot;c&quot;&gt;#用户名&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#rpc-user=user&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#密码&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#rpc-passwd=passwd&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#上面的认证方式不建议使用,建议使用下面的token方式&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#设置加密的密钥&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#rpc-secret=token&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#允许rpc&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;enable&lt;/span&gt;-rpc&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#允许所有来源, web界面跨域权限需要&lt;/span&gt;
+      rpc-allow-origin-all&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#允许外部访问，false的话只监听本地端口&lt;/span&gt;
+      rpc-listen-all&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#RPC端口, 仅当默认端口被占用时修改&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#rpc-listen-port=6800&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#最大同时下载数(任务数), 路由建议值: 3&lt;/span&gt;
+      max-concurrent-downloads&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5
+      &lt;span class=&quot;c&quot;&gt;#断点续传&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#同服务器连接数&lt;/span&gt;
+      max-connection-per-server&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5
+      &lt;span class=&quot;c&quot;&gt;#最小文件分片大小, 下载线程数上限取决于能分出多少片, 对于小文件重要&lt;/span&gt;
+      min-split-size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;10M
+      &lt;span class=&quot;c&quot;&gt;#单文件最大线程数, 路由建议值: 5&lt;/span&gt;
+      &lt;span class=&quot;nv&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;10
+      &lt;span class=&quot;c&quot;&gt;#下载速度限制&lt;/span&gt;
+      max-overall-download-limit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+      &lt;span class=&quot;c&quot;&gt;#单文件速度限制&lt;/span&gt;
+      max-download-limit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+      &lt;span class=&quot;c&quot;&gt;#上传速度限制&lt;/span&gt;
+      max-overall-upload-limit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+      &lt;span class=&quot;c&quot;&gt;#单文件速度限制&lt;/span&gt;
+      max-upload-limit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+      &lt;span class=&quot;c&quot;&gt;#断开速度过慢的连接&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#lowest-speed-limit=0&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#验证用，需要1.16.1之后的release版本&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#referer=*&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#文件保存路径, 默认为当前启动位置&lt;/span&gt;
+      &lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/sun/Downloads
+      &lt;span class=&quot;c&quot;&gt;#文件缓存, 使用内置的文件缓存, 如果你不相信Linux内核文件缓存和磁盘内置缓存时使用, 需要1.16及以上版本&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#disk-cache=0&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#另一种Linux文件缓存方式, 使用前确保您使用的内核支持此选项, 需要1.15及以上版本(?)&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#enable-mmap=true&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#文件预分配, 能有效降低文件碎片, 提高磁盘性能. 缺点是预分配时间较长&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;#所需时间 none &amp;lt; falloc ? trunc &amp;lt;&amp;lt; prealloc, falloc和trunc需要文件系统和内核支持&lt;/span&gt;
+      file-allocation&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;prealloc
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
+  &lt;li&gt;运行aria2c
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  aria2c --conf-path&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;dir&amp;gt;/aria2.conf
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;安装chrome(firefox)插件
+  &lt;a href=&quot;https://github.com/acgotaku/BaiduExporter&quot;&gt;BairuExporter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;在浏览器中找到要下载的资源点击导出下载Aria2 RPC 即可&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nihao&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
 </description>
         <pubDate>Sun, 22 Oct 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/10/fdsf/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/10/fdsf/</guid>
+        <link>http://localhost:4000/2017/10/bcloudd/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/10/bcloudd/</guid>
         
-        <category>博客</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>test</title>
-        <description>#十一八天假期就这么没有了 * $GGGGGGGGG$
-* 尽快；ss;ss
-* 
-*** 
-
-```python
-print(nihao)
-```
-
-</description>
-        <pubDate>Sun, 22 Oct 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/10/t/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/10/t/</guid>
-        
-        <category>博客</category>
+        <category>Fedora</category>
         
         
       </item>
