@@ -5,9 +5,54 @@
     <description>欢迎来到我的个人站~</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Oct 2017 17:14:04 +0800</pubDate>
-    <lastBuildDate>Sun, 22 Oct 2017 17:14:04 +0800</lastBuildDate>
+    <pubDate>Sun, 22 Oct 2017 18:24:31 +0800</pubDate>
+    <lastBuildDate>Sun, 22 Oct 2017 18:24:31 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>test</title>
+        <description>&lt;p&gt;#十一八天假期就这么没有了 * $GGGGGGGGG$&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;尽快；ss;ss&lt;/li&gt;
+  &lt;li&gt;
+    &lt;hr /&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nihao&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sun, 22 Oct 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/10/fdsf/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/10/fdsf/</guid>
+        
+        <category>博客</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>test</title>
+        <description>#十一八天假期就这么没有了 * $GGGGGGGGG$
+* 尽快；ss;ss
+* 
+*** 
+
+```python
+print(nihao)
+```
+
+</description>
+        <pubDate>Sun, 22 Oct 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/10/t/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/10/t/</guid>
+        
+        <category>博客</category>
+        
+        
+      </item>
     
       <item>
         <title>Jekyll搭建个人博客</title>
