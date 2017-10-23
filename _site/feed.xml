@@ -5,9 +5,108 @@
     <description>欢迎来到我的个人站~</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Oct 2017 22:37:49 +0800</pubDate>
-    <lastBuildDate>Sun, 22 Oct 2017 22:37:49 +0800</lastBuildDate>
+    <pubDate>Mon, 23 Oct 2017 21:14:06 +0800</pubDate>
+    <lastBuildDate>Mon, 23 Oct 2017 21:14:06 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>Fedora 系统的一些设置</title>
+        <description>&lt;p&gt;&lt;strong&gt;目的&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;tmux&quot;&gt;tmux&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#设置前缀为Ctrl + a&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; -g prefix C-a
+&lt;span class=&quot;c&quot;&gt;#解除Ctrl+b 与前缀的对应关系&lt;/span&gt;
+unbind C-b
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;-option -g mouse on
+
+&lt;span class=&quot;c&quot;&gt;#up&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt;-key k &lt;span class=&quot;k&quot;&gt;select&lt;/span&gt;-pane -U
+&lt;span class=&quot;c&quot;&gt;#down&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt;-key j &lt;span class=&quot;k&quot;&gt;select&lt;/span&gt;-pane -D
+&lt;span class=&quot;c&quot;&gt;#left&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt;-key h &lt;span class=&quot;k&quot;&gt;select&lt;/span&gt;-pane -L
+&lt;span class=&quot;c&quot;&gt;#right&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt;-key l &lt;span class=&quot;k&quot;&gt;select&lt;/span&gt;-pane -R
+&lt;span class=&quot;c&quot;&gt;#select last window&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt;-key C-l &lt;span class=&quot;k&quot;&gt;select&lt;/span&gt;-window -l
+
+&lt;span class=&quot;c&quot;&gt;#copy-mode 将快捷键设置为vi 模式&lt;/span&gt;
+setw -g mode-keys vi
+&lt;span class=&quot;c&quot;&gt;# split window&lt;/span&gt;
+unbind &lt;span class=&quot;s1&quot;&gt;'&quot;'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# vertical split (prefix -)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt; - splitw -v
+unbind %
+&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt; | splitw -h &lt;span class=&quot;c&quot;&gt;# horizontal split (prefix |)&lt;/span&gt;
+
+
+
+&lt;span class=&quot;c&quot;&gt;#statusline&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;-option -g status off
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;-option -g status-interval 0
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;-option -g status-justify &lt;span class=&quot;s2&quot;&gt;&quot;centre&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;-option -g status-left-length 60
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;-option -g status-right-length 90
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;-option -g status-left &lt;span class=&quot;s2&quot;&gt;&quot;#(~/.tmux-powerline/tmux-powerline/powerline.sh left)&quot;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#set-option -g status-right &quot;#(~/.tmux-powerline/tmux-powerline/powerline.sh right)&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;-window-option -g window-status-current-format &lt;span class=&quot;s2&quot;&gt;&quot;#[fg=colour235, bg=colour27]⮀#[fg=colour255, bg=colour27] #I ⮁ #W #[fg=colour27, bg=colour235]⮀&quot;&lt;/span&gt;
+
+
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; -g pane-border-style &lt;span class=&quot;nb&quot;&gt;fg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;magenta
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; -g pane-active-border-style &lt;span class=&quot;nb&quot;&gt;fg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;magenta
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; -g pane-active-border-style &lt;span class=&quot;nb&quot;&gt;bg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;default
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;以上文件保存为 .tmux.conf&lt;/p&gt;
+&lt;h2 id=&quot;bashrc&quot;&gt;bashrc&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c&quot;&gt;# .bashrc&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Source global definitions&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; -f /etc/bashrc &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+	. /etc/bashrc
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Uncomment the following line if you don't like systemctl's auto-paging feature:&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# export SYSTEMD_PAGER=&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# User specific aliases and functions&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias  &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'evince&amp;amp;'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias  &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;vim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'vimx'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;EDITOR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;vim
+&lt;span class=&quot;c&quot;&gt;##export TERM=xterm-256color&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#export TERM=xterm+256colors&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;completion-ignore-case on
+&lt;span class=&quot;nv&quot;&gt;PS1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;[&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[\e&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;[36;1m&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\]\u&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[\e&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;[32;1m&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\]\h\[\e&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;[0m&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\]&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[\e&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;[35;1m&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\]\W\e&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;[m&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\]&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;]$&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;dircolor&quot;&gt;dircolor&lt;/h2&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone git://github.com/seebi/dircolors-solarized.git
+cp ~/dircolors-solarized/dircolors.256dark ~/.dircolors
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;git&quot;&gt;git&lt;/h2&gt;
+&lt;p&gt;为避免每次push 到github都要输入账号密码，可以设置明文保存在.git-credentials中(有风险)&lt;/p&gt;
+
+&lt;p&gt;只需执行一下代码即可自动保存&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global credential.helper store
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 23 Oct 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/10/fedora-config/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/10/fedora-config/</guid>
+        
+        <category>Fedora</category>
+        
+        
+      </item>
     
       <item>
         <title>运用aria2c下载百度云内容</title>
@@ -15,52 +114,52 @@
   &lt;li&gt;安装aria2
   dnf install aria2&lt;/li&gt;
   &lt;li&gt;配置aria2
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &lt;span class=&quot;c&quot;&gt;#用户名&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#rpc-user=user&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#密码&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#rpc-passwd=passwd&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#上面的认证方式不建议使用,建议使用下面的token方式&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#设置加密的密钥&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#rpc-secret=token&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#允许rpc&lt;/span&gt;
-      &lt;span class=&quot;nb&quot;&gt;enable&lt;/span&gt;-rpc&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#允许所有来源, web界面跨域权限需要&lt;/span&gt;
-      rpc-allow-origin-all&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#允许外部访问，false的话只监听本地端口&lt;/span&gt;
-      rpc-listen-all&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#RPC端口, 仅当默认端口被占用时修改&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#rpc-listen-port=6800&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#最大同时下载数(任务数), 路由建议值: 3&lt;/span&gt;
-      max-concurrent-downloads&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5
-      &lt;span class=&quot;c&quot;&gt;#断点续传&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#同服务器连接数&lt;/span&gt;
-      max-connection-per-server&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5
-      &lt;span class=&quot;c&quot;&gt;#最小文件分片大小, 下载线程数上限取决于能分出多少片, 对于小文件重要&lt;/span&gt;
-      min-split-size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;10M
-      &lt;span class=&quot;c&quot;&gt;#单文件最大线程数, 路由建议值: 5&lt;/span&gt;
-      &lt;span class=&quot;nv&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;10
-      &lt;span class=&quot;c&quot;&gt;#下载速度限制&lt;/span&gt;
-      max-overall-download-limit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
-      &lt;span class=&quot;c&quot;&gt;#单文件速度限制&lt;/span&gt;
-      max-download-limit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
-      &lt;span class=&quot;c&quot;&gt;#上传速度限制&lt;/span&gt;
-      max-overall-upload-limit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
-      &lt;span class=&quot;c&quot;&gt;#单文件速度限制&lt;/span&gt;
-      max-upload-limit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
-      &lt;span class=&quot;c&quot;&gt;#断开速度过慢的连接&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#lowest-speed-limit=0&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#验证用，需要1.16.1之后的release版本&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#referer=*&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#文件保存路径, 默认为当前启动位置&lt;/span&gt;
-      &lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/sun/Downloads
-      &lt;span class=&quot;c&quot;&gt;#文件缓存, 使用内置的文件缓存, 如果你不相信Linux内核文件缓存和磁盘内置缓存时使用, 需要1.16及以上版本&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#disk-cache=0&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#另一种Linux文件缓存方式, 使用前确保您使用的内核支持此选项, 需要1.15及以上版本(?)&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#enable-mmap=true&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#文件预分配, 能有效降低文件碎片, 提高磁盘性能. 缺点是预分配时间较长&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;#所需时间 none &amp;lt; falloc ? trunc &amp;lt;&amp;lt; prealloc, falloc和trunc需要文件系统和内核支持&lt;/span&gt;
-      file-allocation&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;prealloc
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c&quot;&gt;#用户名&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#rpc-user=user&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#密码&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#rpc-passwd=passwd&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#上面的认证方式不建议使用,建议使用下面的token方式&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#设置加密的密钥&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#rpc-secret=token&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#允许rpc&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;enable&lt;/span&gt;-rpc&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#允许所有来源, web界面跨域权限需要&lt;/span&gt;
+  rpc-allow-origin-all&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#允许外部访问，false的话只监听本地端口&lt;/span&gt;
+  rpc-listen-all&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#RPC端口, 仅当默认端口被占用时修改&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#rpc-listen-port=6800&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#最大同时下载数(任务数), 路由建议值: 3&lt;/span&gt;
+  max-concurrent-downloads&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5
+  &lt;span class=&quot;c&quot;&gt;#断点续传&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#同服务器连接数&lt;/span&gt;
+  max-connection-per-server&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5
+  &lt;span class=&quot;c&quot;&gt;#最小文件分片大小, 下载线程数上限取决于能分出多少片, 对于小文件重要&lt;/span&gt;
+  min-split-size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;10M
+  &lt;span class=&quot;c&quot;&gt;#单文件最大线程数, 路由建议值: 5&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;10
+  &lt;span class=&quot;c&quot;&gt;#下载速度限制&lt;/span&gt;
+  max-overall-download-limit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+  &lt;span class=&quot;c&quot;&gt;#单文件速度限制&lt;/span&gt;
+  max-download-limit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+  &lt;span class=&quot;c&quot;&gt;#上传速度限制&lt;/span&gt;
+  max-overall-upload-limit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+  &lt;span class=&quot;c&quot;&gt;#单文件速度限制&lt;/span&gt;
+  max-upload-limit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+  &lt;span class=&quot;c&quot;&gt;#断开速度过慢的连接&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#lowest-speed-limit=0&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#验证用，需要1.16.1之后的release版本&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#referer=*&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#文件保存路径, 默认为当前启动位置&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/sun/Downloads
+  &lt;span class=&quot;c&quot;&gt;#文件缓存, 使用内置的文件缓存, 如果你不相信Linux内核文件缓存和磁盘内置缓存时使用, 需要1.16及以上版本&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#disk-cache=0&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#另一种Linux文件缓存方式, 使用前确保您使用的内核支持此选项, 需要1.15及以上版本(?)&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#enable-mmap=true&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#文件预分配, 能有效降低文件碎片, 提高磁盘性能. 缺点是预分配时间较长&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#所需时间 none &amp;lt; falloc ? trunc &amp;lt;&amp;lt; prealloc, falloc和trunc需要文件系统和内核支持&lt;/span&gt;
+  file-allocation&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;prealloc
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
   &lt;/li&gt;
@@ -76,8 +175,8 @@
 
 </description>
         <pubDate>Sun, 22 Oct 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/10/bcloudd/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/10/bcloudd/</guid>
+        <link>http://localhost:4000/2017/10/bcloud/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/10/bcloud/</guid>
         
         <category>Fedora</category>
         

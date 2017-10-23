@@ -7,16 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>运用aria2c下载百度云内容</title>
-  <meta name="description" content="  安装aria2  dnf install aria2  配置aria2          #用户名      #rpc-user=user      #密码      #rpc-passwd=passwd      #上面的认证方式不建议使用,建议使用下面的token方式      #设置加密的密钥     ...">
+  <meta name="description" content="  安装aria2  dnf install aria2  配置aria2      #用户名  #rpc-user=user  #密码  #rpc-passwd=passwd  #上面的认证方式不建议使用,建议使用下面的token方式  #设置加密的密钥  #rpc-secret=token  #允许rpc  ...">
   <meta name="author" content="leopardpan">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="运用aria2c下载百度云内容">
-  <meta name="twitter:description" content="  安装aria2  dnf install aria2  配置aria2          #用户名      #rpc-user=user      #密码      #rpc-passwd=passwd      #上面的认证方式不建议使用,建议使用下面的token方式      #设置加密的密钥     ...">
+  <meta name="twitter:description" content="  安装aria2  dnf install aria2  配置aria2      #用户名  #rpc-user=user  #密码  #rpc-passwd=passwd  #上面的认证方式不建议使用,建议使用下面的token方式  #设置加密的密钥  #rpc-secret=token  #允许rpc  ...">
   
   <meta property="og:type" content="article">
   <meta property="og:title" content="运用aria2c下载百度云内容">
-  <meta property="og:description" content="  安装aria2  dnf install aria2  配置aria2          #用户名      #rpc-user=user      #密码      #rpc-passwd=passwd      #上面的认证方式不建议使用,建议使用下面的token方式      #设置加密的密钥     ...">
+  <meta property="og:description" content="  安装aria2  dnf install aria2  配置aria2      #用户名  #rpc-user=user  #密码  #rpc-passwd=passwd  #上面的认证方式不建议使用,建议使用下面的token方式  #设置加密的密钥  #rpc-secret=token  #允许rpc  ...">
   
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link rel="canonical" href="http://localhost:4000/2017/10/bcloudd/">
+  <link rel="canonical" href="http://localhost:4000/2017/10/bcloud/">
   <link rel="alternate" type="application/rss+xml" title="孙付" href="http://localhost:4000/feed.xml">
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
@@ -163,52 +163,52 @@
   <li>安装aria2
   dnf install aria2</li>
   <li>配置aria2
-    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>      <span class="c">#用户名</span>
-      <span class="c">#rpc-user=user</span>
-      <span class="c">#密码</span>
-      <span class="c">#rpc-passwd=passwd</span>
-      <span class="c">#上面的认证方式不建议使用,建议使用下面的token方式</span>
-      <span class="c">#设置加密的密钥</span>
-      <span class="c">#rpc-secret=token</span>
-      <span class="c">#允许rpc</span>
-      <span class="nb">enable</span>-rpc<span class="o">=</span><span class="nb">true</span>
-      <span class="c">#允许所有来源, web界面跨域权限需要</span>
-      rpc-allow-origin-all<span class="o">=</span><span class="nb">true</span>
-      <span class="c">#允许外部访问，false的话只监听本地端口</span>
-      rpc-listen-all<span class="o">=</span><span class="nb">true</span>
-      <span class="c">#RPC端口, 仅当默认端口被占用时修改</span>
-      <span class="c">#rpc-listen-port=6800</span>
-      <span class="c">#最大同时下载数(任务数), 路由建议值: 3</span>
-      max-concurrent-downloads<span class="o">=</span>5
-      <span class="c">#断点续传</span>
-      <span class="k">continue</span><span class="o">=</span><span class="nb">true</span>
-      <span class="c">#同服务器连接数</span>
-      max-connection-per-server<span class="o">=</span>5
-      <span class="c">#最小文件分片大小, 下载线程数上限取决于能分出多少片, 对于小文件重要</span>
-      min-split-size<span class="o">=</span>10M
-      <span class="c">#单文件最大线程数, 路由建议值: 5</span>
-      <span class="nv">split</span><span class="o">=</span>10
-      <span class="c">#下载速度限制</span>
-      max-overall-download-limit<span class="o">=</span>0
-      <span class="c">#单文件速度限制</span>
-      max-download-limit<span class="o">=</span>0
-      <span class="c">#上传速度限制</span>
-      max-overall-upload-limit<span class="o">=</span>0
-      <span class="c">#单文件速度限制</span>
-      max-upload-limit<span class="o">=</span>0
-      <span class="c">#断开速度过慢的连接</span>
-      <span class="c">#lowest-speed-limit=0</span>
-      <span class="c">#验证用，需要1.16.1之后的release版本</span>
-      <span class="c">#referer=*</span>
-      <span class="c">#文件保存路径, 默认为当前启动位置</span>
-      <span class="nv">dir</span><span class="o">=</span>/home/sun/Downloads
-      <span class="c">#文件缓存, 使用内置的文件缓存, 如果你不相信Linux内核文件缓存和磁盘内置缓存时使用, 需要1.16及以上版本</span>
-      <span class="c">#disk-cache=0</span>
-      <span class="c">#另一种Linux文件缓存方式, 使用前确保您使用的内核支持此选项, 需要1.15及以上版本(?)</span>
-      <span class="c">#enable-mmap=true</span>
-      <span class="c">#文件预分配, 能有效降低文件碎片, 提高磁盘性能. 缺点是预分配时间较长</span>
-      <span class="c">#所需时间 none &lt; falloc ? trunc &lt;&lt; prealloc, falloc和trunc需要文件系统和内核支持</span>
-      file-allocation<span class="o">=</span>prealloc
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>  <span class="c">#用户名</span>
+  <span class="c">#rpc-user=user</span>
+  <span class="c">#密码</span>
+  <span class="c">#rpc-passwd=passwd</span>
+  <span class="c">#上面的认证方式不建议使用,建议使用下面的token方式</span>
+  <span class="c">#设置加密的密钥</span>
+  <span class="c">#rpc-secret=token</span>
+  <span class="c">#允许rpc</span>
+  <span class="nb">enable</span>-rpc<span class="o">=</span><span class="nb">true</span>
+  <span class="c">#允许所有来源, web界面跨域权限需要</span>
+  rpc-allow-origin-all<span class="o">=</span><span class="nb">true</span>
+  <span class="c">#允许外部访问，false的话只监听本地端口</span>
+  rpc-listen-all<span class="o">=</span><span class="nb">true</span>
+  <span class="c">#RPC端口, 仅当默认端口被占用时修改</span>
+  <span class="c">#rpc-listen-port=6800</span>
+  <span class="c">#最大同时下载数(任务数), 路由建议值: 3</span>
+  max-concurrent-downloads<span class="o">=</span>5
+  <span class="c">#断点续传</span>
+  <span class="k">continue</span><span class="o">=</span><span class="nb">true</span>
+  <span class="c">#同服务器连接数</span>
+  max-connection-per-server<span class="o">=</span>5
+  <span class="c">#最小文件分片大小, 下载线程数上限取决于能分出多少片, 对于小文件重要</span>
+  min-split-size<span class="o">=</span>10M
+  <span class="c">#单文件最大线程数, 路由建议值: 5</span>
+  <span class="nv">split</span><span class="o">=</span>10
+  <span class="c">#下载速度限制</span>
+  max-overall-download-limit<span class="o">=</span>0
+  <span class="c">#单文件速度限制</span>
+  max-download-limit<span class="o">=</span>0
+  <span class="c">#上传速度限制</span>
+  max-overall-upload-limit<span class="o">=</span>0
+  <span class="c">#单文件速度限制</span>
+  max-upload-limit<span class="o">=</span>0
+  <span class="c">#断开速度过慢的连接</span>
+  <span class="c">#lowest-speed-limit=0</span>
+  <span class="c">#验证用，需要1.16.1之后的release版本</span>
+  <span class="c">#referer=*</span>
+  <span class="c">#文件保存路径, 默认为当前启动位置</span>
+  <span class="nv">dir</span><span class="o">=</span>/home/sun/Downloads
+  <span class="c">#文件缓存, 使用内置的文件缓存, 如果你不相信Linux内核文件缓存和磁盘内置缓存时使用, 需要1.16及以上版本</span>
+  <span class="c">#disk-cache=0</span>
+  <span class="c">#另一种Linux文件缓存方式, 使用前确保您使用的内核支持此选项, 需要1.15及以上版本(?)</span>
+  <span class="c">#enable-mmap=true</span>
+  <span class="c">#文件预分配, 能有效降低文件碎片, 提高磁盘性能. 缺点是预分配时间较长</span>
+  <span class="c">#所需时间 none &lt; falloc ? trunc &lt;&lt; prealloc, falloc和trunc需要文件系统和内核支持</span>
+  file-allocation<span class="o">=</span>prealloc
 </code></pre>
     </div>
   </li>
@@ -296,18 +296,35 @@
         </li>
         
         
+        <li class="next">
+            <a href="/2017/10/fedora-config/" data-toggle="tooltip" data-placement="top" title="Fedora 系统的一些设置">下一篇：  <span>Fedora 系统的一些设置</span>
+            </a>
+        </li>
+        
     </ul>
 </section>
 
-<section class="post-comments">
+
+    
+    <script>
+    var idcomments_acct = '0cacb79369a7965de248147642bb6ab2';
+    var idcomments_post_id;
+    var idcomments_post_url;
+    </script>
+    <span id="IDCommentsPostTitle" style="display:none"></span>
+    <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+
+
+
+<!--<section class="post-comments">
 
   
     <div id="disqus_thread"></div>
     <script>
     
     var disqus_config = function () {
-        this.page.url = "http://localhost:4000/2017/10/bcloudd/";
-        this.page.identifier = "/2017/10/bcloudd/";
+        this.page.url = "http://localhost:4000/2017/10/bcloud/";
+        this.page.identifier = "/2017/10/bcloud/";
     };
     var disqus_shortname = 'cstsunfu';
     
@@ -323,7 +340,7 @@
   
 
 </section>
-
+-->
 
             <section class="footer">
     <footer>

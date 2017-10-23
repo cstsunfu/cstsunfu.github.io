@@ -21,4 +21,7 @@ layout: default
 </article>
 
 {% include new-old.html %}
-{% include comments.html %}
+{% if site.intensedebate_comments %}
+    {% include intensedebate-comments.html %}
+{% endif %}
+<!--{% include comments.html %}-->
