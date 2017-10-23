@@ -46,6 +46,8 @@ permalink: /:year/:month/:title/
 # Format
 highlighter: rouge
 
+markdown: kramdown
+mathjax: true
 textColor: #FF0000
 kramdown:
     math_engine: mathjax
