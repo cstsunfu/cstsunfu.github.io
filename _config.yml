@@ -9,8 +9,8 @@ avatarDesc: 机器学习/nlp
 url: "http://cstsunfu.github.io"
 
 # Comment
-comment:
-    disqus: cstsunfu
+#comment:
+    #disqus: cstsunfu
     # uyan: 2143225  # 有言id,登录有言官网申请
 
 # Social
