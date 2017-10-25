@@ -5,7 +5,7 @@ date: 2017-10-24
 tags: vim
 ---
 
-#### markdown同步渲染，且支持mathjax
+### markdown同步渲染，且支持mathjax
 
 安装instant-markdown-d并在 "/usr/lib/node_modules/instant-markdown-d"中修改index.html文件。在<head></head>标签中间插入下面的代码
 ```bash
@@ -24,4 +24,3 @@ MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
 });
 ```
 
-$$1^2$$

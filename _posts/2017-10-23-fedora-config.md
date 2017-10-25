@@ -6,7 +6,7 @@ tags: Fedora
 ---
 > *Fedora 在开始使用之前需要进行一些必要的配置，以使其更容易使用，且外观更好看*
 
-## tmux
+### tmux
 
 ```bash
 #设置前缀为Ctrl + a
@@ -54,7 +54,7 @@ set -g pane-active-border-style bg=default
 ```
 
 以上文件保存为 .tmux.conf
-## bashrc
+### bashrc
 
 ```bash
 
@@ -79,7 +79,7 @@ PS1="[\[\e[36;1m\]\u@\[\e[32;1m\]\h\[\e[0m\] \[\e[35;1m\]\W\e[m\]]$"
 ```
 
 
-## dircolor
+### dircolor
 ```bash
 git clone git://github.com/seebi/dircolors-solarized.git
 cp ~/dircolors-solarized/dircolors.256dark ~/.dircolors
@@ -87,7 +87,7 @@ cp ~/dircolors-solarized/dircolors.256dark ~/.dircolors
 
 
 
-## git
+### git
 为避免每次push 到github都要输入账号密码，可以设置明文保存在.git-credentials中(有风险)
 
 只需执行一下代码即可自动保存
