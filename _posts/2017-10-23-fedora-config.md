@@ -6,7 +6,20 @@ tags: Fedora
 ---
 > *Fedora 在开始使用之前需要进行一些必要的配置，以使其更容易使用，且外观更好看*
 
+
+
+<!-- vim-markdown-toc GFM -->
+
+* [tmux](#tmux)
+* [bashrc](#bashrc)
+* [dircolor](#dircolor)
+* [git](#git)
+* [font](#font)
+
+<!-- vim-markdown-toc -->
+
 ### tmux
+
 
 ```bash
 #设置前缀为Ctrl + a
@@ -93,4 +106,25 @@ cp ~/dircolors-solarized/dircolors.256dark ~/.dircolors
 只需执行一下代码即可自动保存
 ```bash
 git config --global credential.helper store
+```
+
+
+### font
+
+```bash
+dnf install freetype-freeworld
+```
+
+_~/.Xresources_
+```bash
+Xft.dpi: 96
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+```
+
+_~/.xinitrc_
+```bash
+xrdb -load ~/.Xresources
 ```
