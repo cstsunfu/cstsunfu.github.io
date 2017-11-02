@@ -2,22 +2,25 @@
 layout: post
 title: Fedora 系统的一些设置
 date: 2017-10-23
-tags: Fedora   
+tags: Fedora
 ---
 > *Fedora 在开始使用之前需要进行一些必要的配置，以使其更容易使用，且外观更好看*
 
 
 
-<!-- vim-markdown-toc GFM -->
+
+<!-- vim-markdown-toc Redcarpet -->
 
 * [tmux](#tmux)
 * [bashrc](#bashrc)
 * [dircolor](#dircolor)
 * [git](#git)
 * [font](#font)
+* [gnome](#gnome)
 
 <!-- vim-markdown-toc -->
 
+----
 ### tmux
 
 
@@ -67,6 +70,9 @@ set -g pane-active-border-style bg=default
 ```
 
 以上文件保存为 .tmux.conf
+
+----
+
 ### bashrc
 
 ```bash
@@ -99,6 +105,7 @@ cp ~/dircolors-solarized/dircolors.256dark ~/.dircolors
 ```
 
 
+----
 
 ### git
 为避免每次push 到github都要输入账号密码，可以设置明文保存在.git-credentials中(有风险)
@@ -108,6 +115,7 @@ cp ~/dircolors-solarized/dircolors.256dark ~/.dircolors
 git config --global credential.helper store
 ```
 
+----
 
 ### font
 
@@ -127,4 +135,26 @@ Xft.lcdfilter: lcddefault
 _~/.xinitrc_
 ```bash
 xrdb -load ~/.Xresources
+```
+----
+
+### gnome
+
+If can not open the system setting.
+
+Install gnome-control-center
+
+
+useful gnome extension：
+```
+	dash to dock
+	clopboard indicator
+	drop down terminal
+	coverflow alt-tab
+	places status indicator
+	easy screen cast
+	dynamic top bar
+	top panel workspace scroll
+	wikipedia search provider
+	hide top bar
 ```
