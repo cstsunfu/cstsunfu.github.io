@@ -177,3 +177,19 @@ useful gnome extension：
 
 <iframe height=498 width=510 src="/images/posts/t.webm"></iframe>
 <!--![nihao](/images/posts/t.webm)-->
+
+<video id="video" controls="" preload="none" >
+      <!--<source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">-->
+      <source id="webm" src="/images/posts/t.webm" type="video/webm">
+      <!--<source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg">-->
+      <p>Your user agent does not support the HTML5 Video element.</p>
+</video>
+
+<p>
+    <video id="video" controls="" preload="none" >
+          <!--<source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">-->
+          <source id="webm" src="/images/posts/t.webm" type="video/webm">
+          <!--<source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg">-->
+          <p>Your user agent does not support the HTML5 Video element.</p>
+    </video>
+</p>
