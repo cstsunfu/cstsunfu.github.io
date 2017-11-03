@@ -44,6 +44,15 @@ bind-key C-l select-window -l
 
 #copy-mode 将快捷键设置为vi 模式
 setw -g mode-keys vi
+bind ` copy-mode
+unbind [
+unbind p
+bind p paste-buffer
+bind -t vi-copy v begin-selection
+bind -t vi-copy y copy-selection
+bind -t vi-copy Escape cancel
+bind y run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
+
 # split window
 unbind '"'
 # vertical split (prefix -)
@@ -64,9 +73,15 @@ set-option -g status-left "#(~/.tmux-powerline/tmux-powerline/powerline.sh left)
 set-window-option -g window-status-current-format "#[fg=colour235, bg=colour27]⮀#[fg=colour255, bg=colour27] #I ⮁ #W #[fg=colour27, bg=colour235]⮀"
 
 
-set -g pane-border-style fg=magenta
-set -g pane-active-border-style fg=magenta
+set -g pane-border-style fg=default
+set -g pane-border-style bg=default
+set -g pane-active-border-style fg=default
 set -g pane-active-border-style bg=default
+# panes
+set -g pane-border-bg default
+set -g pane-border-fg colour16
+set -g pane-active-border-bg default
+set -g pane-active-border-fg colour16
 ```
 
 以上文件保存为 .tmux.conf
@@ -158,3 +173,7 @@ useful gnome extension：
 	wikipedia search provider
 	hide top bar
 ```
+
+
+
+![](/images/posts/t.webm)
