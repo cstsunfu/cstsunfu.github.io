@@ -173,7 +173,21 @@
   <p><em>Fedora 在开始使用之前需要进行一些必要的配置，以使其更容易使用，且外观更好看</em></p>
 </blockquote>
 
-<h2 id="tmux">tmux</h2>
+<!-- vim-markdown-toc Redcarpet -->
+
+<ul>
+  <li><a href="#tmux">tmux</a></li>
+  <li><a href="#bashrc">bashrc</a></li>
+  <li><a href="#dircolor">dircolor</a></li>
+  <li><a href="#git">git</a></li>
+  <li><a href="#font">font</a></li>
+  <li><a href="#gnome">gnome</a></li>
+</ul>
+
+<!-- vim-markdown-toc -->
+
+<hr />
+<h3 id="tmux">tmux</h3>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c">#设置前缀为Ctrl + a</span>
 <span class="nb">set</span> -g prefix C-a
@@ -194,6 +208,15 @@ unbind C-b
 
 <span class="c">#copy-mode 将快捷键设置为vi 模式</span>
 setw -g mode-keys vi
+<span class="nb">bind</span> <span class="sb">`</span> copy-mode
+unbind <span class="o">[</span>
+unbind p
+<span class="nb">bind </span>p paste-buffer
+<span class="nb">bind</span> -t vi-copy v begin-selection
+<span class="nb">bind</span> -t vi-copy y copy-selection
+<span class="nb">bind</span> -t vi-copy Escape cancel
+<span class="nb">bind </span>y run <span class="s2">"tmux save-buffer - | reattach-to-user-namespace pbcopy"</span>
+
 <span class="c"># split window</span>
 unbind <span class="s1">'"'</span>
 <span class="c"># vertical split (prefix -)</span>
@@ -214,14 +237,23 @@ unbind %
 <span class="nb">set</span>-window-option -g window-status-current-format <span class="s2">"#[fg=colour235, bg=colour27]⮀#[fg=colour255, bg=colour27] #I ⮁ #W #[fg=colour27, bg=colour235]⮀"</span>
 
 
-<span class="nb">set</span> -g pane-border-style <span class="nb">fg</span><span class="o">=</span>magenta
-<span class="nb">set</span> -g pane-active-border-style <span class="nb">fg</span><span class="o">=</span>magenta
+<span class="nb">set</span> -g pane-border-style <span class="nb">fg</span><span class="o">=</span>default
+<span class="nb">set</span> -g pane-border-style <span class="nb">bg</span><span class="o">=</span>default
+<span class="nb">set</span> -g pane-active-border-style <span class="nb">fg</span><span class="o">=</span>default
 <span class="nb">set</span> -g pane-active-border-style <span class="nb">bg</span><span class="o">=</span>default
+<span class="c"># panes</span>
+<span class="nb">set</span> -g pane-border-bg default
+<span class="nb">set</span> -g pane-border-fg colour16
+<span class="nb">set</span> -g pane-active-border-bg default
+<span class="nb">set</span> -g pane-active-border-fg colour16
 </code></pre>
 </div>
 
 <p>以上文件保存为 .tmux.conf</p>
-<h2 id="bashrc">bashrc</h2>
+
+<hr />
+
+<h3 id="bashrc">bashrc</h3>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>
 <span class="c"># .bashrc</span>
@@ -245,19 +277,66 @@ unbind %
 </code></pre>
 </div>
 
-<h2 id="dircolor">dircolor</h2>
+<h3 id="dircolor">dircolor</h3>
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>git clone git://github.com/seebi/dircolors-solarized.git
 cp ~/dircolors-solarized/dircolors.256dark ~/.dircolors
 </code></pre>
 </div>
 
-<h2 id="git">git</h2>
+<hr />
+
+<h3 id="git">git</h3>
 <p>为避免每次push 到github都要输入账号密码，可以设置明文保存在.git-credentials中(有风险)</p>
 
 <p>只需执行一下代码即可自动保存</p>
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>git config --global credential.helper store
 </code></pre>
 </div>
+
+<hr />
+
+<h3 id="font">font</h3>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>dnf install freetype-freeworld
+</code></pre>
+</div>
+
+<p><em>~/.Xresources</em></p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Xft.dpi: 96
+Xft.hinting: <span class="nb">true
+</span>Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+</code></pre>
+</div>
+
+<p><em>~/.xinitrc</em></p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>xrdb -load ~/.Xresources
+</code></pre>
+</div>
+<hr />
+
+<h3 id="gnome">gnome</h3>
+
+<p>If can not open the system setting.</p>
+
+<p>Install gnome-control-center</p>
+
+<p>useful gnome extension：</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>	dash to dock
+	clopboard indicator
+	drop down terminal
+	coverflow alt-tab
+	places status indicator
+	easy screen cast
+	dynamic top bar
+	top panel workspace scroll
+	wikipedia search provider
+	hide top bar
+</code></pre>
+</div>
+
+<p><img src="/images/posts/t.webm" alt="nihao" /></p>
 
 
   </section>
@@ -327,7 +406,7 @@ cp ~/dircolors-solarized/dircolors.256dark ~/.dircolors
        <ul class="pager">
         
         <li class="previous">
-            <a href="/2017/10/bcloud/" data-toggle="tooltip" data-placement="top" title="运用aria2c下载百度云内容">上一篇：  <span>运用aria2c下载百度云内容</span>
+            <a href="/2017/10/bcloud/" data-toggle="tooltip" data-placement="top" title="运用aria2c下载">上一篇：  <span>运用aria2c下载</span>
             </a>
         </li>
         
@@ -401,11 +480,6 @@ cp ~/dircolors-solarized/dircolors.256dark ~/.dircolors
         <div class = "footer_div">  
             <p class="copyright text-muted">
             Copyright &copy; 孙付 2017 Theme by leopardpan</a> |
-        <iframe
-               style="margin-left: 2px; margin-bottom:-5px;"
-               frameborder="0" scrolling="0" width="91px" height="20px"
-                                                          src="https://ghbtns.com/github-btn.html?user=leopardpan&repo=leopardpan.github.io&type=star&count=true" >
-        </iframe>
             </p>
             <div align="right">
                 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">

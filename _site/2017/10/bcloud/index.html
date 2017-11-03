@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <title>运用aria2c下载百度云内容</title>
-    <meta name="description" content="  安装aria2  dnf install aria2  配置aria2      #用户名  #rpc-user=user  #密码  #rpc-passwd=passwd  #上面的认证方式不建议使用,建议使用下面的token方式  #设置加密的密钥  #rpc-secret=token  #允许rpc  ...">
+    <title>运用aria2c下载</title>
+    <meta name="description" content="下载百度云内容  安装aria2  dnf install aria2  配置aria2      #用户名  #rpc-user=user  #密码  #rpc-passwd=passwd  #上面的认证方式不建议使用,建议使用下面的token方式  #设置加密的密钥  #rpc-secret=token  #...">
     <meta name="author" content="leopardpan">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="运用aria2c下载百度云内容">
-    <meta name="twitter:description" content="  安装aria2  dnf install aria2  配置aria2      #用户名  #rpc-user=user  #密码  #rpc-passwd=passwd  #上面的认证方式不建议使用,建议使用下面的token方式  #设置加密的密钥  #rpc-secret=token  #允许rpc  ...">
+    <meta name="twitter:title" content="运用aria2c下载">
+    <meta name="twitter:description" content="下载百度云内容  安装aria2  dnf install aria2  配置aria2      #用户名  #rpc-user=user  #密码  #rpc-passwd=passwd  #上面的认证方式不建议使用,建议使用下面的token方式  #设置加密的密钥  #rpc-secret=token  #...">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="运用aria2c下载百度云内容">
-    <meta property="og:description" content="  安装aria2  dnf install aria2  配置aria2      #用户名  #rpc-user=user  #密码  #rpc-passwd=passwd  #上面的认证方式不建议使用,建议使用下面的token方式  #设置加密的密钥  #rpc-secret=token  #允许rpc  ...">
+    <meta property="og:title" content="运用aria2c下载">
+    <meta property="og:description" content="下载百度云内容  安装aria2  dnf install aria2  配置aria2      #用户名  #rpc-user=user  #密码  #rpc-passwd=passwd  #上面的认证方式不建议使用,建议使用下面的token方式  #设置加密的密钥  #rpc-secret=token  #...">
 
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -158,7 +158,7 @@
             <div class="content-wrapper__inner">
                 <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title">运用aria2c下载百度云内容</h1>
+    <h1 class="post-title">运用aria2c下载</h1>
     <div class="post-meta">
       <img src="/images/calendar.png" width="20px"/> 
       <time datetime="2017-10-22 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2017-10-22</time>  
@@ -169,7 +169,8 @@
   </header>
 
   <section class="post">
-    <ul>
+    <h3 id="下载百度云内容">下载百度云内容</h3>
+<ul>
   <li>安装aria2
   dnf install aria2</li>
   <li>配置aria2
@@ -232,6 +233,38 @@
   <li>在浏览器中找到要下载的资源点击导出下载Aria2 RPC 即可</li>
 </ul>
 
+<h3 id="通用下载">通用下载</h3>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>    <span class="c"># 多线程</span>
+    aria2c -s10 -x10 +what you want to download.
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>    <span class="c"># 限制下载速度</span>
+    aria2c --max-download-limit<span class="o">=</span>500k +..
+</code></pre>
+</div>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>    <span class="c"># 续传</span>
+    aria2c -c +..
+</code></pre>
+</div>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>    <span class="c"># 自定义名字保存</span>
+    aria2c -o +..
+</code></pre>
+</div>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>    <span class="c"># 多文件下载</span>
+    aria2c -Z +.. +.. ..
+</code></pre>
+</div>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>    <span class="c"># 从文件读取下载内容</span>
+    aria2c -i  +file
+</code></pre>
+</div>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>    <span class="c"># 下载时需要user，password的</span>
+    aria2c --http-user<span class="o">=</span>xxx --http-password<span class="o">=</span>xxx
+    aria2c --ftp-user<span class="o">=</span>xxx --ftp-password<span class="o">=</span>xxx
+</code></pre>
+</div>
 
 
   </section>
@@ -299,11 +332,6 @@
             </style>
 
        <ul class="pager">
-        
-        <li class="previous">
-            <a href="/2016/10/test/" data-toggle="tooltip" data-placement="top" title="Jekyll搭建个人博客">上一篇：  <span>Jekyll搭建个人博客</span>
-            </a>
-        </li>
         
         
         <li class="next">
@@ -375,11 +403,6 @@
         <div class = "footer_div">  
             <p class="copyright text-muted">
             Copyright &copy; 孙付 2017 Theme by leopardpan</a> |
-        <iframe
-               style="margin-left: 2px; margin-bottom:-5px;"
-               frameborder="0" scrolling="0" width="91px" height="20px"
-                                                          src="https://ghbtns.com/github-btn.html?user=leopardpan&repo=leopardpan.github.io&type=star&count=true" >
-        </iframe>
             </p>
             <div align="right">
                 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">

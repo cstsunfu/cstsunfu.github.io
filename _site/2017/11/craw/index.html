@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>爬网页的一些tip</title>
+    <meta name="description" content="  爬虫是获得数据强有力的工具，爬虫技巧需要一些积累，前些天实验需要写了一个爬虫记录一下以后可能用到的东西  下面的代码大部分稍加改动都可以直接用的">
+    <meta name="author" content="leopardpan">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="爬网页的一些tip">
+    <meta name="twitter:description" content="  爬虫是获得数据强有力的工具，爬虫技巧需要一些积累，前些天实验需要写了一个爬虫记录一下以后可能用到的东西  下面的代码大部分稍加改动都可以直接用的">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="爬网页的一些tip">
+    <meta property="og:description" content="  爬虫是获得数据强有力的工具，爬虫技巧需要一些积累，前些天实验需要写了一个爬虫记录一下以后可能用到的东西  下面的代码大部分稍加改动都可以直接用的">
+
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="canonical" href="http://localhost:4000/2017/11/craw/">
+    <link rel="alternate" type="application/rss+xml" title="孙付" href="http://localhost:4000/feed.xml">
+
+    <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+
+    <!-- 站点统计 -->
+    <script 
+      async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>  
+
+    <!-- 百度统计 -->
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?fc20c49c32db589b7b83b5e8c41b2716";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    
+
+    <!-- google 统计 -->
+    <!---->
+
+</head>
+
+
+    <body>
+
+        <span class="mobile btn-mobile-menu">        
+            <div class="nav_container">
+                <nav class="nav-menu-item" style = "float:right">
+                    <i class="nav-menu-item">
+                        <a href="/#blog" title="" class="blog-button">  博客主页
+                        </a>
+                    </i>
+                    
+                    <i class="nav-menu-item">
+
+                        <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                            所有文章
+                        </a>
+                    </i>
+                    
+                    <i class="nav-menu-item">
+
+                        <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                            标签
+                        </a>
+                    </i>
+                    
+                    <i class="nav-menu-item">
+
+                        <a href="/about" title="about" class="btn-mobile-menu__icon">
+                            关于我
+                        </a>
+                    </i>
+                    
+                </nav>
+            </div>
+        </span>
+
+        <header class="panel-cover panel-cover--collapsed" style="background-image: url('/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left">            
+            <a href="/#blog" title="前往 孙付 的主页" class="blog-button">
+                <div class="img"><img src="/images/avatar.jpg" alt="img"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h2> 
+                            
+                                cstsunfu
+                            
+                        </h2>
+                        <p>
+                           
+                                机器学习/nlp
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 孙付" class="blog-button">孙付</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">个人blog</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">北海虽赊,扶摇可接; 东隅已逝,桑榆非晚</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        
+
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客主页</a></li>
+                
+                  <li class="navigation__item"><a href="/archive" title="archive">所有文章</a></li>
+                
+                  <li class="navigation__item"><a href="/tags" title="tags">标签</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="about">关于我</a></li>
+                
+              </ul>
+            </nav>
+          </div>          
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-clear"></div>
+    
+  </div>
+</header>
+
+
+        <div class="content-wrapper">
+            <div class="content-wrapper__inner">
+                <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">爬网页的一些tip</h1>
+    <div class="post-meta">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="2017-11-02 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2017-11-02</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    <blockquote>
+  <p>爬虫是获得数据强有力的工具，爬虫技巧需要一些积累，前些天实验需要写了一个爬虫记录一下以后可能用到的东西</p>
+
+  <p>下面的代码大部分稍加改动都可以直接用的</p>
+
+</blockquote>
+
+<!-- vim-markdown-toc GFM -->
+
+<ul>
+  <li><a href="#tip-1-用到的一些包">Tip 1 用到的一些包</a></li>
+  <li><a href="#tip-2-简单网站的网页获取">Tip 2 简单网站的网页获取</a></li>
+  <li><a href="#tip-3-有js代码-简单模仿人获取-by-chrome">Tip 3 有js代码 简单模仿人获取 by chrome</a></li>
+  <li><a href="#tip-4--有js内容不执行js且定义变化头-firefox版">Tip 4  有js内容，不执行js，且定义变化头, firefox版</a></li>
+  <li><a href="#tip-5-不执行js的终极方案">Tip 5 不执行js的终极方案</a></li>
+</ul>
+
+<!-- vim-markdown-toc -->
+
+<h3 id="tip-1-用到的一些包">Tip 1 用到的一些包</h3>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span> <span class="c"># 获取网页</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span> <span class="c"># 解析网页</span>
+<span class="kn">import</span> <span class="nn">re</span>   <span class="c">#正则，用于解析网页</span>
+<span class="kn">import</span> <span class="nn">random</span>   <span class="c">#用于生成随机头</span>
+</code></pre>
+</div>
+
+<h3 id="tip-2-简单网站的网页获取">Tip 2 简单网站的网页获取</h3>
+
+<p>获取网页的python代码</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+
+<span class="k">def</span> <span class="nf">getHTMLText</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">GenRand</span><span class="p">():</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="n">url</span> <span class="o">==</span> <span class="s">''</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s">''</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s">'http'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">url</span><span class="p">:</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="s">'https:'</span> <span class="o">+</span> <span class="n">url</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'User-Agent'</span><span class="p">:</span>
+        <span class="s">'Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0'</span><span class="p">,</span>
+        <span class="s">'Content-Type'</span><span class="p">:</span>
+        <span class="s">'application/x-www-form-urlencoded; charset=UTF-8'</span><span class="p">,</span>
+        <span class="s">'Connection'</span><span class="p">:</span>
+        <span class="s">'close'</span>
+    <span class="p">}</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="k">while</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">32</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">headers</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+                <span class="s">"X-FORWARDED-FOR"</span><span class="p">:</span>
+                <span class="s">"{}.{}.{}.{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">GenRand</span><span class="p">(),</span> <span class="n">GenRand</span><span class="p">(),</span> <span class="n">GenRand</span><span class="p">(),</span>
+                                     <span class="n">GenRand</span><span class="p">())</span>
+            <span class="p">})</span>
+            <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">'retry'</span><span class="p">)</span>
+            <span class="k">with</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span> <span class="k">as</span> <span class="n">html</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">text</span>
+                <span class="k">if</span> <span class="n">html</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+                    <span class="k">break</span>
+        <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">pass</span>
+    <span class="k">return</span> <span class="n">result</span>
+</code></pre>
+</div>
+
+<p>小规模爬取数据，只需要在爬取时添加一个随机睡眠时间即可，时间长度具体问题具体分析。</p>
+
+<h3 id="tip-3-有js代码-简单模仿人获取-by-chrome">Tip 3 有js代码 简单模仿人获取 by chrome</h3>
+
+<p>有些网站只获得http代码，并不能得到全部你想要的信息，有时还需要执行js代码，此时可以通过模拟浏览器的方法曲线获得。</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+
+<span class="k">def</span> <span class="nf">gethtml</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">thnum</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">GenRand</span><span class="p">():</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">lastHeight</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span>
+            <span class="s">'return document.body.scrollHeight'</span><span class="p">)</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="n">browser</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span>
+                <span class="s">'window.scrollTo(0, document.body.scrollHeight);'</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+            <span class="n">newHeight</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span>
+                <span class="s">'return document.body.scrollHeight'</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">newHeight</span> <span class="o">==</span> <span class="n">lastHeight</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">lastHeight</span> <span class="o">=</span> <span class="n">newHeight</span>
+        <span class="n">curhtml</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">page_source</span>
+        <span class="n">browser</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">curhtml</span>
+    <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">browser</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s">''</span>
+
+</code></pre>
+</div>
+
+<p>小规模爬取，拟人操作，速度还凑合。</p>
+
+<h3 id="tip-4--有js内容不执行js且定义变化头-firefox版">Tip 4  有js内容，不执行js，且定义变化头, firefox版</h3>
+
+<p>这里提供一个最简单的通过firefox获取网页代码，速度较慢，需要firefox插件modify_header.xpi</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+
+<span class="k">def</span> <span class="nf">gethtml</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">thnum</span><span class="p">):</span>
+
+    <span class="n">windowset</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">600</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">]]</span>
+
+    <span class="k">def</span> <span class="nf">GenRand</span><span class="p">():</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="n">profile</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">FirefoxProfile</span><span class="p">()</span>
+    <span class="n">profile</span><span class="o">.</span><span class="n">add_extension</span><span class="p">(</span><span class="s">"modify_header.xpi"</span><span class="p">)</span>
+    <span class="c"># profile.set_preference("modifyheaders.config.active", True)</span>
+    <span class="n">profile</span><span class="o">.</span><span class="n">set_preference</span><span class="p">(</span><span class="s">"modifyheaders.config.openNewTab"</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="n">profile</span><span class="o">.</span><span class="n">set_preference</span><span class="p">(</span><span class="s">"modifyheaders.config.alwaysOn"</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="n">profile</span><span class="o">.</span><span class="n">set_preference</span><span class="p">(</span><span class="s">"modifyheaders.headers.count"</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">profile</span><span class="o">.</span><span class="n">set_preference</span><span class="p">(</span><span class="s">"modifyheaders.headers.action0"</span><span class="p">,</span> <span class="s">"Add"</span><span class="p">)</span>
+    <span class="n">profile</span><span class="o">.</span><span class="n">set_preference</span><span class="p">(</span><span class="s">"modifyheaders.headers.name0"</span><span class="p">,</span> <span class="s">"X-Forwarded-For"</span><span class="p">)</span>
+    <span class="n">profile</span><span class="o">.</span><span class="n">set_preference</span><span class="p">(</span><span class="s">"modifyheaders.headers.value0"</span><span class="p">,</span>
+                           <span class="s">"{}.{}.{}.{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">GenRand</span><span class="p">(),</span>
+                                                <span class="n">GenRand</span><span class="p">(),</span> <span class="n">GenRand</span><span class="p">(),</span>
+                                                <span class="n">GenRand</span><span class="p">()))</span>
+    <span class="n">profile</span><span class="o">.</span><span class="n">set_preference</span><span class="p">(</span><span class="s">"modifyheaders.headers.enabled0"</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="n">profile</span><span class="o">.</span><span class="n">update_preferences</span><span class="p">()</span>
+    <span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Firefox</span><span class="p">(</span><span class="n">profile</span><span class="p">)</span>
+    <span class="n">browser</span><span class="o">.</span><span class="n">set_window_rect</span><span class="p">(</span><span class="n">windowset</span><span class="p">[</span><span class="n">thnum</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">windowset</span><span class="p">[</span><span class="n">thnum</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span>
+                            <span class="n">windowset</span><span class="p">[</span><span class="n">thnum</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">windowset</span><span class="p">[</span><span class="n">thnum</span><span class="p">][</span><span class="mi">3</span><span class="p">])</span>
+    <span class="n">browser</span><span class="o">.</span><span class="n">set_page_load_timeout</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">lastHeight</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span>
+            <span class="s">'return document.body.scrollHeight'</span><span class="p">)</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="n">browser</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span>
+                <span class="s">'window.scrollTo(0, document.body.scrollHeight);'</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+            <span class="n">newHeight</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span>
+                <span class="s">'return document.body.scrollHeight'</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">newHeight</span> <span class="o">==</span> <span class="n">lastHeight</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">lastHeight</span> <span class="o">=</span> <span class="n">newHeight</span>
+        <span class="n">curhtml</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">page_source</span>
+        <span class="n">browser</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">curhtml</span>
+    <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'error'</span><span class="p">)</span>
+        <span class="n">browser</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s">''</span>
+</code></pre>
+</div>
+
+<p>这个方法速度慢，效果不理想</p>
+
+<h3 id="tip-5-不执行js的终极方案">Tip 5 不执行js的终极方案</h3>
+
+<p>这个代码不单提供了模拟phantomjs，而且还将运用一个代理池，代理池需要自己搭建，如果代理质量不好（免费）的话，更新频率一定要快（自己把握，最好几秒一次，代理池里不用放很多代理，十来个就好了，本来失效就快）</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.desired_capabilities</span> <span class="kn">import</span> <span class="n">DesiredCapabilities</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">pool</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">l</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">getHTMLText</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">flag</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">cnt</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">pool</span>
+    <span class="k">if</span> <span class="n">url</span> <span class="o">==</span> <span class="s">''</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s">''</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s">'http'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">url</span><span class="p">:</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="s">'http:'</span> <span class="o">+</span> <span class="n">url</span>
+
+    <span class="n">dcap</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">DesiredCapabilities</span><span class="o">.</span><span class="n">PHANTOMJS</span><span class="p">)</span>
+    <span class="n">dcap</span><span class="p">[</span><span class="s">"phantomjs.page.settings.userAgent"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s">"Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.23 Mobile Safari/537.36"</span>
+    <span class="p">)</span>
+    <span class="n">dcap</span><span class="p">[</span><span class="s">"phantomjs.page.settings.loadImages"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">if</span> <span class="n">flag</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">proxies</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s">"http"</span><span class="p">:</span> <span class="n">pool</span><span class="p">[</span><span class="n">cnt</span><span class="p">],</span>
+            <span class="c"># "https": "http://10.10.1.10:1080",</span>
+        <span class="p">}</span>
+        <span class="n">dcap</span><span class="p">[</span><span class="s">"phantomjs.page.settings.proxy"</span><span class="p">]</span> <span class="o">=</span> <span class="n">proxies</span>
+    <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">PhantomJS</span><span class="p">(</span><span class="n">desired_capabilities</span><span class="o">=</span><span class="n">dcap</span><span class="p">)</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="k">while</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">'retry'</span><span class="p">)</span>
+            <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">page_source</span>
+            <span class="k">if</span> <span class="n">driver</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">statusCode</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="nb">Exception</span>
+            <span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+
+        <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">cnt</span> <span class="o">&gt;=</span> <span class="n">l</span> <span class="o">-</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="n">getpool</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+
+<span class="k">def</span> <span class="nf">getpool</span><span class="p">():</span>
+    <span class="s">"""TODO: Docstring for getpool.
+    :returns: TODO
+
+    """</span>
+    <span class="n">pool</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">html</span> <span class="o">=</span> <span class="n">getHTMLText</span><span class="p">(</span><span class="s">'Your proxy pools'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="c"># return</span>
+    <span class="n">ips</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ips</span><span class="p">):</span>
+        <span class="n">pool</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ip</span>
+
+<span class="n">getpool</span><span class="p">()</span>
+<span class="n">l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pool</span><span class="p">)</span>
+</code></pre>
+</div>
+
+
+  </section>
+</article>
+
+<section>
+
+            <div class="content-play">
+              <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">打赏一个呗</a></p>
+              <div class="hide_box-play"></div>
+              <div class="shang_box-play">
+                <a class="shang_close-play" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="/images/payimg/close.jpg" alt="取消" /></a>
+                <div class="shang_tit-play">
+                  <p>感谢您的支持，我会继续努力的!</p>
+                </div>
+                <div class="shang_payimg">
+                    <img src="/images/payimg/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                </div>
+              <div class="shang_payimg">    
+                    <img src="/images/payimg/weipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                </div>
+                <div class="pay_explain">扫码打赏，你说多少就多少</div>
+                <div class="shang_payselect">
+                  <div class="pay_item checked" data-id="alipay">
+                    <span class="pay_logo"><img src="/images/payimg/alipay.jpg" alt="支付宝" /></span>
+                  </div>
+                  <div class="pay_item" data-id="weipay">
+                    <span class="pay_logo"><img src="/images/payimg/wechat.jpg" alt="微信" /></span>
+                  </div>
+                </div>
+                <div class="shang_info-play">
+                  <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">
+            function dashangToggle(){
+              $(".hide_box-play").fadeToggle();
+              $(".shang_box-play").fadeToggle();
+            }
+            </script>
+
+            <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';"></div>
+
+            <style type="text/css">
+              .content-play{width:80%;margin-top: 20px;margin-bottom: 10px;height:40px;}
+              .hide_box-play{z-index:999;filter:alpha(opacity=50);background:#666;opacity: 0.5;-moz-opacity: 0.5;left:0;top:0;height:99%;width:100%;position:fixed;display:none;}
+              .shang_box-play{width:540px;height:540px;padding:10px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;left:50%;top:50%;margin-left:-280px;margin-top:-280px;border:1px dotted #dedede;display:none;}
+              .shang_box-play img{border:none;border-width:0;}
+              .dashang{display:block;width:100px;margin:5px auto;height:25px;line-height:25px;padding:10px;background-color:#E74851;color:#fff;text-align:center;text-decoration:none;border-radius:10px;font-weight:bold;font-size:16px;transition: all 0.3s;}
+              .dashang:hover{opacity:0.8;padding:15px;font-size:18px;}
+              .shang_close-play{float:right;display:inline-block;
+                margin-right: 10px;margin-top: 20px;
+              }
+              .shang_logo{display:block;text-align:center;margin:20px auto;}
+              .shang_tit-play{width: 100%;height: 75px;text-align: center;line-height: 66px;color: #a3a3a3;font-size: 16px;background: url('/images/payimg/cy-reward-title-bg.jpg');font-family: 'Microsoft YaHei';margin-top: 7px;margin-right:2px;}
+              .shang_tit-play p{color:#a3a3a3;text-align:center;font-size:16px;}
+              .shang_payimg{width:140px;padding:10px;padding-left: 80px; /*border:6px solid #EA5F00;**/margin:0 auto;border-radius:3px;height:140px;display:inline-block;}
+              .shang_payimg img{display:inline-block;margin-right:10px;float:left;text-align:center;width:140px;height:140px; }
+              .pay_explain{text-align:center;margin:10px auto;font-size:12px;color:#545454;}
+              .shang_payselect{text-align:center;margin:0 auto;margin-top:40px;cursor:pointer;height:60px;width:500px;margin-left:110px;}
+              .shang_payselect .pay_item{display:inline-block;margin-right:140px;float:left;}
+              .shang_info-play{clear:both;}
+              .shang_info-play p,.shang_info-play a{color:#C3C3C3;text-align:center;font-size:12px;text-decoration:none;line-height:2em;}
+            </style>
+
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2017/10/vim-config/" data-toggle="tooltip" data-placement="top" title="vim 的一些设置">上一篇：  <span>vim 的一些设置</span>
+            </a>
+        </li>
+        
+        
+    </ul>
+</section>
+
+
+    
+    <script>
+    var idcomments_acct = '0cacb79369a7965de248147642bb6ab2';
+    var idcomments_post_id;
+    var idcomments_post_url;
+    </script>
+    <span id="IDCommentsPostTitle" style="display:none"></span>
+    <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+
+
+
+
+                <section class="footer">
+    <footer>
+        <div class = "footer_div">  
+            <nav class="cover-navigation navigation--social">
+                <ul class="navigation">
+
+                    
+
+                    
+                    <!-- Github -->
+                    <li class="navigation__item_social">
+                        <a href="https://github.com/cstsunfu" title="@cstsunfu 的 Github" target="_blank">
+                            <i class='social fa fa-github fa-2x'></i>
+                            <span class="label">Github</span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    <!-- RSS -->
+                    <li class="navigation__item_social">
+                        <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+                            <i class='social fa fa-rss fa-2x'></i>
+                            <span class="label">RSS</span>
+                        </a>
+                    </li>
+
+                    
+                    <!-- Email -->
+                    <li class="navigation__item_social">
+                        <a href="mailto:cstsunfu@gmail.com" title="Contact me">
+                            <i class='social fa fa-envelope fa-2x'></i>
+                            <span class="label">Email</span>
+                        </a>
+                    </li>
+                    
+
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class = "footer_div">  
+            <p class="copyright text-muted">
+            Copyright &copy; 孙付 2017 Theme by leopardpan</a> |
+            </p>
+            <div align="right">
+                <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+                <!--[> 访问统计 <]-->
+                <span id="busuanzi_container_site_pv">
+                    本站总访问量
+                    <span id="busuanzi_value_site_pv"></span>次
+                </span>
+
+            </div>
+            <div>
+    </footer>
+</section>
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+    </body>
+    <script type="text/javascript" async 
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</html>
+
+<!--<script type="text/javascript"-->
+        <!--src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">-->
+<!--</script>-->
