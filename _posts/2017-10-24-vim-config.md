@@ -24,3 +24,19 @@ MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
 });
 ```
 
+### ycm C-x C-o补全python3时出现 E117
+
+```bash
+E117: Unknown function:
+pythoncomplete#Complete
+```
+这个错误是因为omnifunc补全找的是pythoncomplete, 而我们用的是python3
+
+只需要将ftplugin/python.vim中的
+```viml
+setlocal omnifunc=pythoncomplete#Complete
+```
+改为
+```viml
+setlocal omnifunc=python3complete#Complete
+```

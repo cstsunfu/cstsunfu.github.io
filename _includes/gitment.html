@@ -1,0 +1,15 @@
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  <!--id: '页面 ID', // 可选。默认为 location.href-->
+  owner: "cstsunfu",
+  repo: "https://github.com/cstsunfu/comment",
+  oauth: {
+    client_id: "2c484134b1d795a9a247",
+    client_secret: "828a11284c8809c21cf4ef1bb5655431596d6012",
+  },
+})
+gitment.render('container')
+</script>
