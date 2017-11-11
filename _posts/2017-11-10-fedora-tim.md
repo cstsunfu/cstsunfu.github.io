@@ -44,4 +44,4 @@ LD_LIBRARY_PATH=/usr/lib/i386-linux-gnu/deepin-wine WINEPREFIX=$HOME/.deepinwine
 
 将.deb包中的图标放在.local/share/icons文件夹，.desktop文件放在.local/share/applications文件夹下，且将.desktop文件中的Exec 指向上面的脚本
 
-![](/images/post/fedora/tim.png)
+![](/images/posts/fedora/tim.png)
