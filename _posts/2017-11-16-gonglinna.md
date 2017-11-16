@@ -10,8 +10,17 @@ tags: 生活
 其实对于我来说，这已经够了
 ```
 ### 跟着我一起读，龚琳娜 **老师**
+embed
+<embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=10810501&page=1" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></embed>
 
+flash
+<embed id="STK_137722048114034" width="440" height="356" wmode="transparent" quality="high" allowfullscreen="true" flashvars="playMovie=true&auto=1" pluginspage="http://get.adobe.com/cn/flashplayer/" allowscriptaccess="never" src="static.hdslb.com/miniloader.swf?aid=10810501&page=1" type="application/x-shockwave-flash" style="visibility: visible;"> 
+video
+<video autoplay= "autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
+      <source id="mp4" src="https://www.bilibili.com/video/av10810501/?from=search&seid=9902056209154189195" type="video/mp4">
+</video>
 
+static.hdslb.com/miniloader.swf?aid=10810501&page=1
 第一次听老师唱歌就是下面这首《小河淌水》，卧槽，真的听哭了，第一次，也是唯一一次听歌竟然特么听哭了。当然如果看完整的视频你肯定会更加感动，感谢bilibili竟然让我找到了有点前后关系的较完整的视频。
 <video autoplay="autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
       <source id="mp4" src="https://tx.acgvideo.com/0/68/17836691-1-hd.mp4?txTime=1510847397&platform=pc&txSecret=6fb218934e24760b20824235a3c92f8b&oi=3396919386&rate=301295&hfb=b99ffc3c5c68f00a33123bb25f882d5b" type="video/mp4">
