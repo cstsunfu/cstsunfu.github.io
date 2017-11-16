@@ -9,7 +9,8 @@ tags: 生活
 下面的东西我只是觉得好，并不知道为什么好,
 其实对于我来说，这已经够了
 ```
-> .......很不幸，现在大部分视频都不能观看了，点击视频下方链接去b站观看
+> .......很不幸，现在大部分视频都不能观看了，强烈推荐点击视频下方链接去b站观看
+
 ### 跟着我一起读，龚琳娜 **老师**
 第一次听老师唱歌就是下面这首《小河淌水》，卧槽，真的听哭了，第一次，也是唯一一次听歌竟然特么听哭了。当然如果看完整的视频你肯定会更加感动，感谢bilibili竟然让我找到了有点前后关系的较完整的视频。
 <video autoplay= "autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
@@ -19,9 +20,6 @@ tags: 生活
 
 [清晰版](https://www.bilibili.com/video/av10810501/?from=search&seid=16516255047628420529)
 其实这首歌不只是歌声动人，最打动人的可能是龚锣之间的感情，感觉这个节目给老锣的几个镜头真的好，这几个镜头基本可以抵得过下面观众‘没素质’的吹口哨带来的缺憾了
-<video autoplay= "autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
-      <source id="flv" src="/images/posts/video/xiaohetangshui.flv" type="video/flv">
-</video>
 
 ### 推荐几首
 
