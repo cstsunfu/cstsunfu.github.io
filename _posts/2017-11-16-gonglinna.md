@@ -9,8 +9,10 @@ tags: 生活
 下面的东西我只是觉得好，并不知道为什么好,
 其实对于我来说，这已经够了
 ```
+<embed src="https://tx.acgvideo.com/0/68/17836691-1-hd.mp4?txTime=1510841150&platform=pc&txSecret=d85fdba6a49bdb6174c23152508d34d5&oi=3396919386&rate=301295&hfb=b99ffc3c5c68f00a33123bb25f882d5b"></embed>
 ### 跟着我一起读，龚琳娜 **老师**
 <embed width="440" height="356" wmode="transparent" quality="high" allowfullscreen="true" flashvars="playMovie=true&auto=1" pluginspage="http://get.adobe.com/cn/flashplayer/" allowscriptaccess="never" src="http://static.hdslb.com/miniloader.swf?aid=12017664&page=1" type="application/x-shockwave-flash" style="visibility: visible;"> 
+
 
 第一次听老师唱歌就是下面这首《小河淌水》，卧槽，真的听哭了，第一次，也是唯一一次听歌竟然特么听哭了。当然如果看完整的视频你肯定会更加感动，感谢bilibili竟然让我找到了有点前后关系的较完整的视频。
 <video  loop="loop" id="video" height="384" width="683" controls=autoplay
@@ -28,7 +30,7 @@ tags: 生活
 
 - 爱诺依，模仿小孩子的，非常欢脱
 
-<iframe height="384" width="683" src="https://www.bilibili.com/html/html5player.html?&cid=19829329&aid=12017664&pre_ad=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe height="384" width="683" src=https://www.bilibili.com/video/av12017664/?from=search&seid=11728951335266770445" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 <video autoplay= "autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
       <source id="swf" src="https://tx.acgvideo.com/7/15/1174827-1-hd.mp4?txTime=1510839789&platform=pc&txSecret=d70191ba6c0e2efc6a04b3c4c9783014&oi=3396919386&rate=362802&hfb=b99ffc3c5c68f00a33123bb25f882d5b" type="video/swf">
