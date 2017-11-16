@@ -22,6 +22,9 @@ tags: 生活
 其实还有非常非常多的好听的，但是我没在b站找到资源，其他站上有广告，就不转了
 
 - 爱诺依，模仿小孩子的，非常欢脱
+
+<iframe height="384" width="683" src="http://www.bilibili.com/html/html5player.html?cid=10254557&aid=6311410" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
 <video  id="video" height="384" width="683" controls="" preload="none" >
       <source id="mp4" src="https://tx.acgvideo.com/7/15/1174827-1-hd.mp4?txTime=1510839789&platform=pc&txSecret=d70191ba6c0e2efc6a04b3c4c9783014&oi=3396919386&rate=362802&hfb=b99ffc3c5c68f00a33123bb25f882d5b" type="video/mp4">
 </video>
