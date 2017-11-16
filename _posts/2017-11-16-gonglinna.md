@@ -13,7 +13,7 @@ tags: 生活
 
 
 第一次听老师唱歌就是下面这首《小河淌水》，卧槽，真的听哭了，第一次，也是唯一一次听歌竟然特么听哭了。当然如果看完整的视频你肯定会更加感动，感谢bilibili竟然让我找到了有点前后关系的较完整的视频。
-<video preload="auto" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
+<video autoplay="autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
       <source id="mp4" src="https://tx.acgvideo.com/0/68/17836691-1-hd.mp4?txTime=1510847397&platform=pc&txSecret=6fb218934e24760b20824235a3c92f8b&oi=3396919386&rate=301295&hfb=b99ffc3c5c68f00a33123bb25f882d5b" type="video/mp4">
 </video>
 
@@ -25,32 +25,32 @@ tags: 生活
 
 - 爱诺依，模仿小孩子的，非常欢脱
 
-
-<video preload="auto" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
+<video autoplay="autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
       <source id="mp4" src="https://tx.acgvideo.com/7/15/1174827-1-hd.mp4?txTime=1510839789&platform=pc&txSecret=d70191ba6c0e2efc6a04b3c4c9783014&oi=3396919386&rate=362802&hfb=b99ffc3c5c68f00a33123bb25f882d5b" type="video/mp4">
 </video>
 
 
 - 自由鸟，前一半也非常欢快，心情不好的时候听前一半，后面感觉更像现实
 
-<video preload="auto" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
+<video autoplay="autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
       <source id="mp4" src="https://tx.acgvideo.com/e/52/11998460-1-hd.mp4?txTime=1510841758&platform=pc&txSecret=c78d3110a5dfc2954ea321e83d97b058&oi=3396919386&rate=314224&hfb=b99ffc3c5c68f00a33123bb25f882d5b" type="video/mp4">
 </video>
 
 - 山中问答，老锣也有参加，非常好
-<video preload="auto" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
+
+<video autoplay="autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
       <source id="mp4" src="https://tx.acgvideo.com/b/c0/1229960-1-hd.mp4?txTime=1510841895&platform=pc&txSecret=dc5a238daf36f1882f34dd180bf066e5&oi=3396919386&rate=142824&hfb=b99ffc3c5c68f00a33123bb25f882d5b" type="video/mp4">
 </video>
 
 - 山鬼，最新版的，比之前唱的更好了
 
-<video preload="auto" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
+<video autoplay="autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
       <source id="mp4" src="https://tx.acgvideo.com/9/a9/13617122-1-hd.mp4?txTime=1510842098&platform=pc&txSecret=e8ddeaaabebef9ee9a9b906e421283fc&oi=3396919386&rate=297001&hfb=b99ffc3c5c68f00a33123bb25f882d5b" type="video/mp4">
 </video>
 
 - 戏曲忐忑，龚老师唱戏曲那也是一流的，造型也很不错
 
-<video preload="auto" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
+<video autoplay="autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
       <source id="mp4" src="https://tx.acgvideo.com/4/61/1188215-1-hd.mp4?txTime=1510842216&platform=pc&txSecret=febbdaabb0f889b1e87f9687ee030790&oi=3396919386&rate=142663&hfb=b99ffc3c5c68f00a33123bb25f882d5b" type="video/mp4">
 </video>
 
