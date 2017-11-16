@@ -16,8 +16,12 @@ tags: 生活
       <source id="mp4" src="/images/posts/video/xiaohetangshui.mp4" type="video/mp4">
 </video>
 
+
 [清晰版](https://www.bilibili.com/video/av10810501/?from=search&seid=16516255047628420529)
 其实这首歌不只是歌声动人，最打动人的可能是龚锣之间的感情，感觉这个节目给老锣的几个镜头真的好，这几个镜头基本可以抵得过下面观众‘没素质’的吹口哨带来的缺憾了
+<video autoplay= "autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
+      <source id="flv" src="/images/posts/video/xiaohetangshui.flv" type="video/flv">
+</video>
 
 ### 推荐几首
 
