@@ -58,9 +58,10 @@ tags: Music
 [源地址](https://www.bilibili.com/video/av8277247/?from=search&seid=17756973105055108118)
 - 戏曲忐忑，龚老师唱戏曲那也是一流的，造型也很不错
 
-<video id="video" controls="" preload="none" >
-      <source id="mp4" src="https://tx.acgvideo.com/4/61/1188215-1-hd.mp4?txTime=1510842216&platform=pc&txSecret=febbdaabb0f889b1e87f9687ee030790&oi=3396919386&rate=142663&hfb=b99ffc3c5c68f00a33123bb25f882d5b" type="video/mp4">
+<video id="video" height="384" width="683" controls="" preload="none" >
+      <source id="webm" src="/images/posts/video/xiqutante.webm" type="video/webm">
 </video>
+
 [源地址](https://www.bilibili.com/video/av818620/?from=search&seid=9523377491006056390)
 
 *看完这些，相信你对龚老师肯定有了正确认识，去吧，自己找更多资源去吧*
