@@ -17,6 +17,7 @@ tags: Fedora
 * [git](#git)
 * [font](#font)
 * [gnome](#gnome)
+* [python](#python)
 
 <!-- vim-markdown-toc -->
 
@@ -174,8 +175,13 @@ useful gnome extension：
 	hide top bar
 ```
 
+### python
+
+一般需要安装的包
+- numpy
+- pandas
+- torch
+- matplotlib
 
 
-<video autoplay= "autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
-      <source id="webm" src="/images/posts/t.webm" type="video/webm">
-</video>
+
