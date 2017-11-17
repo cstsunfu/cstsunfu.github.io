@@ -25,32 +25,36 @@ tags: Music
 
 ### 推荐几首
 
-其实还有非常非常多的好听的，但是我没在b站找到资源，其他站上有广告，就不转了，这几首能不能播放随缘，因为我的空间有限，不能都缓存到我的github上，不过都给了地址，强力推荐点击链接去b站观看，条件允许去YouTube也可以
+其实还有非常非常多的好听的，但是我的空间实在有限，嵌入别的网站的又不稳定，还有广告，本文旨在改变大家的看法，我想听的时候不用费力再找
 
 - 爱诺依，模仿小孩子的，非常欢脱
 
-<video id="video" controls="" preload="none" >
-      <source id="mp4" src="https://tx.acgvideo.com/7/15/1174827-1-hd.mp4?txTime=1510839789&platform=pc&txSecret=d70191ba6c0e2efc6a04b3c4c9783014&oi=3396919386&rate=362802&hfb=b99ffc3c5c68f00a33123bb25f882d5b" type="video/mp4">
+<video autoplay= "autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
+      <source id="webm" src="/images/posts/video/ainuoyi.webm" type="video/webm">
 </video>
+
 [源地址](https://www.bilibili.com/video/av809345/?from=search&seid=17397350588004746780)
 
 - 自由鸟，前一半也非常欢快，心情不好的时候听前一半，后面感觉更像现实
 
-<video id="video" controls="" preload="none" >
-      <source id="mp4" src="https://tx.acgvideo.com/e/52/11998460-1-hd.mp4?txTime=1510841758&platform=pc&txSecret=c78d3110a5dfc2954ea321e83d97b058&oi=3396919386&rate=314224&hfb=b99ffc3c5c68f00a33123bb25f882d5b" type="video/mp4">
+<video autoplay= "autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
+      <source id="webm" src="/images/posts/video/ziyouniao.webm" type="video/webm">
 </video>
+
 [源地址](https://www.bilibili.com/video/av7339833/?from=search&seid=11091426468289669306#page=13)
 - 山中问答，老锣也有参加，非常好
 
-<video id="video" controls="" preload="none" >
-      <source id="mp4" src="https://tx.acgvideo.com/b/c0/1229960-1-hd.mp4?txTime=1510841895&platform=pc&txSecret=dc5a238daf36f1882f34dd180bf066e5&oi=3396919386&rate=142824&hfb=b99ffc3c5c68f00a33123bb25f882d5b" type="video/mp4">
+<video autoplay= "autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
+      <source id="webm" src="/images/posts/video/shanzhongwenda.webm" type="video/webm">
 </video>
+
 [源地址](https://www.bilibili.com/video/av845725/?from=search&seid=13531551187026671066)
 - 山鬼，最新版的，比之前唱的更好了
 
-<video id="video" controls="" preload="none" >
-      <source id="mp4" src="https://tx.acgvideo.com/9/a9/13617122-1-hd.mp4?txTime=1510842098&platform=pc&txSecret=e8ddeaaabebef9ee9a9b906e421283fc&oi=3396919386&rate=297001&hfb=b99ffc3c5c68f00a33123bb25f882d5b" type="video/mp4">
+<video autoplay= "autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
+      <source id="webm" src="/images/posts/video/shangui.webm" type="video/webm">
 </video>
+
 [源地址](https://www.bilibili.com/video/av8277247/?from=search&seid=17756973105055108118)
 - 戏曲忐忑，龚老师唱戏曲那也是一流的，造型也很不错
 
