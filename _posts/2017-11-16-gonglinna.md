@@ -29,7 +29,7 @@ tags: Music
 
 - 爱诺依，模仿小孩子的，非常欢脱
 
-<video autoplay= "autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
+<video id="video" height="384" width="683" controls="" preload="none" >
       <source id="webm" src="/images/posts/video/ainuoyi.webm" type="video/webm">
 </video>
 
@@ -37,21 +37,21 @@ tags: Music
 
 - 自由鸟，前一半也非常欢快，心情不好的时候听前一半，后面感觉更像现实
 
-<video autoplay= "autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
+<video id="video" height="384" width="683" controls="" preload="none" >
       <source id="webm" src="/images/posts/video/ziyouniao.webm" type="video/webm">
 </video>
 
 [源地址](https://www.bilibili.com/video/av7339833/?from=search&seid=11091426468289669306#page=13)
 - 山中问答，老锣也有参加，非常好
 
-<video autoplay= "autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
+<video id="video" height="384" width="683" controls="" preload="none" >
       <source id="webm" src="/images/posts/video/shanzhongwenda.webm" type="video/webm">
 </video>
 
 [源地址](https://www.bilibili.com/video/av845725/?from=search&seid=13531551187026671066)
 - 山鬼，最新版的，比之前唱的更好了
 
-<video autoplay= "autoplay" loop="loop" id="video" height="384" width="683" controls="" preload="none" >
+<video id="video" height="384" width="683" controls="" preload="none" >
       <source id="webm" src="/images/posts/video/shangui.webm" type="video/webm">
 </video>
 
