@@ -152,6 +152,14 @@ _~/.xinitrc_
 ```bash
 xrdb -load ~/.Xresources
 ```
+
+安装font步骤：
+* 将font放到share/fonts/文件夹下
+* chmod 755 *
+* mkfontscale
+* mkfontdir
+* fc-cache -fv
+
 ----
 
 ### gnome
