@@ -125,6 +125,7 @@ cp ~/dircolors-solarized/dircolors.256dark ~/.dircolors
 
 ### git
 为避免每次push 到github都要输入账号密码，可以设置明文保存在.git-credentials中(有风险)
+保存格式为 https://username:password@github.com
 
 只需执行一下代码即可自动保存
 ```bash
