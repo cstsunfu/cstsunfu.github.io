@@ -2,7 +2,7 @@
 layout: post
 title: 在fedora中安装windows的一些软件
 date: 2017-11-10
-tags: fedora
+tags: Fedora
 ---
 > 有几个windows的软件在linux中还是很需要的，下面以QQ为例，简单介绍下安装。由于deepin有一些对wine的优化，所以这里参考网上的方法也移植了deepin的wine
 
