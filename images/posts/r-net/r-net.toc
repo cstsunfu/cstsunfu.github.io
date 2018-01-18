@@ -1,0 +1,8 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}问题描述}{2}
+\contentsline {section}{\numberline {2}模型结构}{2}
+\contentsline {section}{\numberline {3}Neural Machine Translation by Jointly Learning to Align and Translate}{3}
+\contentsline {section}{\numberline {4}Pointer Networks}{4}
+\contentsline {section}{\numberline {5}Learning Natural Language Inference with LSTM}{4}
+\contentsline {section}{\numberline {6}Machine Comprehension Using Match-LSTM and Answer Pointer}{4}
+\contentsline {section}{\numberline {7}R-Net}{6}
