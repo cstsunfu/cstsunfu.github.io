@@ -22,15 +22,34 @@ body {
 
 ol, ul {
   list-style: none; }
+/*-------------------------------*/
+blockquote {
+    border-left:.5em solid #eee;
+    padding: 0 0 0 2em;
+    margin-left:0;
+}
+blockquote  cite {
+    font-size:14px;
+    line-height:20px;
+    color:#bfbfbf;
+}
+blockquote cite:before {
+    content: '\2014 \00A0';
+}
 
-blockquote, q {
-  quotes: none; 
-  background-color: #f0f0f0;
+blockquote p {
+    color: #666;
 }
-blockquote:before, blockquote:after {
-  content: '';
-  content: none; 
-}
+/*-------------------------------*/
+
+/*blockquote, q {*/
+  /*quotes: none; */
+  /*background-color: #f0f0f0;*/
+/*}*/
+/*blockquote:before, blockquote:after {*/
+  /*content: '';*/
+  /*content: none; */
+/*}*/
 
 q:before, q:after {
   content: '';
