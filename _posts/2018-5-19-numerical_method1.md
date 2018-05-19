@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 数值分析-引论
+title: 数值分析(引论)
 date: 2018-05-19
 tags: Numerical Analysis
 ---
@@ -22,3 +22,5 @@ python:
 
     while abs(x*x-a) > 0.001:
         x = 1/2*(x+a/x)
+
+
