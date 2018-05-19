@@ -5,13 +5,16 @@ title: 关于我
 ```
 目前是在读研究生（FNLP组），主要做NLP相关学习研究
 研究兴趣包括传统机器学习、神经网络、数据挖掘、信息检索及语言学等相关内容。
+学习真有意思
+Mr. Peabody: Why can't children be simple?
+Leonardo: Children are not machines, Peabody.
 ```
 
 - 星座：处女座
 - 籍贯：山东济宁
-- 兴趣爱好：学习，乒乓球，听传统歌曲（尤其喜欢龚琳娜老师夫妇唱的歌） [龚琳娜](https://cstsunfu.github.io/2017/11/gonglinna/)
-- 人生志向：先实现一个小目标，比如先赚一个亿，然后四、五十岁的时候找个好地方开始享受生活。
-- 性格：不像处女座，也有点像
+- 兴趣爱好：学习，乒乓球，摄影初学者，听传统歌曲（尤其喜欢龚琳娜老师夫妇唱的歌） [龚琳娜](https://cstsunfu.github.io/2017/11/gonglinna/)
+- 人生志向：先实现一个小目标，比如先赚一个亿
+- 性格：内向的外向
 - wechat: cstsunfu
 
 
