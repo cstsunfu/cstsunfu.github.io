@@ -11,11 +11,10 @@ tags: Numerical Analysis
 给定一个初始值$$x_0>0$$，另$$x=x_0+\Delta x$$，$$\Delta x$$是增量，于是
 
 $$(x_0+\Delta x)^2 = a$$, 即 $$x_0^2 + 2x_0\Delta x +(\Delta x)^2 =a$$
-于是
+于是省略高阶项$$(\Delta x)^2$$, 有 $$\Delta x \approx \frac{1}{2}(\frac{a}{x_0}-x_0)$$
 $$\begin{align*}
-    x &=x_0+\Delta x \approx a \\
-    \Longrightarrow \Delta x &\approx \frac{1}{2}\left(\frac{a}{x_0}-x_0\right)\\
-    \Longrightarrow x &=x_0+\Delta x \approx\frac{1}{2}\left(\frac{a}{x_0}+x_0\right) =x_1
+    x &=x_0+\Delta x\\
+    &\approx\frac{1}{2}\left(\frac{a}{x_0}+x_0\right) =x_1
 \end{align*}$$
 
 python:
