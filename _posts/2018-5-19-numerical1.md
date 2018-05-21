@@ -26,7 +26,7 @@ python:
 
 ### 解线性方程组的迭代法
 
-谱,谱半径定义：$$\lambda$$为A的*特征值*, x为A对应$$\lambda$$的特征向量, A的全体特征值成为A的谱, 记做$$\sigma (A)$$, 记$$\rho (A)=\max_{1\leq i \leq n}\left|\lambda_i\right|$$ 为矩阵A的谱半径.
+谱,谱半径定义：$$\lambda$$为A的*特征值*, x为A对应$$\lambda$$的特征向量, A的全体特征值成为A的谱, 记做$$\sigma (A)$$, 记$$\rho (A)=\max_{1\leq i \leq n}\left\lvert\lambda_i\right\rvert$$ 为矩阵A的谱半径.
 
 求解线性方程$$Ax=b$$, 其中$$A=(a_{ij})\in \mathbb{R^{n*n}}$$, 迭代求解步骤:
 
