@@ -12,7 +12,7 @@ Leonardo: Children are not machines, Peabody.
 
 - 星座：处女座
 - 籍贯：山东济宁
-- 兴趣爱好：学习，乒乓球，摄影初学者，听传统歌曲（尤其喜欢龚琳娜老师夫妇唱的歌） [龚琳娜](https://cstsunfu.github.io/2017/11/gonglinna/)
+- 兴趣爱好：学习，乒乓球，摄影初学者，民歌民乐 [龚琳娜](https://cstsunfu.github.io/2017/11/gonglinna/)
 - 人生志向：先实现一个小目标，比如先赚一个亿
 - 性格：内向的外向
 - wechat: cstsunfu
