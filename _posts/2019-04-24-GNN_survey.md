@@ -51,7 +51,7 @@ $$ h_v = f(x_v, x_{co[v]}, h_{ne[v]}, x_{ne[v]})$$
 ## GNN分类--按更新方式分类
 
 ![GNN类别](/images/posts/gnn_survey/propegation.png)]
-如图所示，GNN主要分为图卷积网络(GCN)、基于注意力更新的图网络(GAT)、基于门控的更新的图网络、具有跳边的图网络。
+如图所示，GNN主要分为图卷积网络(GCN)、基于注意力更新的图网络(GAT)、基于门控的更新的图网络、具有跳边的图网络。G
 
 ## 各种GCN
 
@@ -296,4 +296,10 @@ $$ \bar{h^{'}} = \rho^{h \rightarrow u} (H^{'})$$
 
 ![Steps of computation in a full GN block](/images/posts/gnn_survey/gn_block.png)]
 
-PS: 写作本文基本未阅读两篇Survey所引用的原论文，且对这两篇论文理解不深，错误之处还请指出。
+最终返回全局节点、普通节点、边的表示，在该框架下的图任务可以是基于图的也可以是基于节点的还可以是基于边的。
+
+## ...
+
+以后有时间再补充吧。如果有人看的话，有错误还请指出，共同进步.
+
+^_^
