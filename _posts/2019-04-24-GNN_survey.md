@@ -283,11 +283,16 @@ $$ N_v表示节点总数， N_e表示边的数量$$
 分别针对边、节点、全局节点定义了三种更新函数$$ \phi$$和三种聚合函数 $$ \rho$$:
 
 $$ e_k^{'} = \phi ^e(e_k, h_{rk}, h_{sk}, u)$$
+
 $$ h_i^{'} = \phi ^h(\bar{e}_i^{'}, h_{i}, u)$$
+
 $$ u^{'} = \phi ^u(\bar{e}^{'}, \bar{h}^{'}, u)$$
  
+ 
 $$ \bar{e_i^{'}} = \rho^{e \rightarrow h} (E_i^{'})$$
+
 $$ \bar{e^{'}} = \rho^{e \rightarrow u} (E^{'})$$
+
 $$ \bar{h^{'}} = \rho^{h \rightarrow u} (H^{'})$$
 
 其中$$ E_i^{'} = \{(e_k^{'}, r_k, s_k)\}_{r_k=i, k=1:N^e}$$, $$ H^{'} = \{h_i^{'}\}_{i=1:N^v}$$, $$ E^{'} = \bigcup _i E_i^{'} = \{(e_k^{'}, r_k, s_k)\}_{k=1:N^e}$$
