@@ -15,7 +15,7 @@ IEEE Fellow, Philip S. Yu的 [A Comprehensive Survey on Graph Neural Networks](h
 '''
 
 
-## 符号定义
+### 符号定义
 
 
 | 标记                                                        | 描述                         |
@@ -38,7 +38,7 @@ IEEE Fellow, Philip S. Yu的 [A Comprehensive Survey on Graph Neural Networks](h
 | $$ I_n$$                                                    | n阶单位阵                    |
 | $$ \mathcal{F}$$                                            | 傅里叶变换                   |
 
-## GNN( Graph Neural Networks )简介
+### GNN( Graph Neural Networks )简介
 
 之前深度学习主要关注例如文字的序列结构、例如图片的平面结构，现在处理这些数据的做法也比较成熟，关注序列任务的NLP领域多用RNN、Transformer、CNN对数据进行Encoder，而关注平面结构的CV领域更多使用CNN及其各种变体对数据进行Encoder。在现实世界中更多的数据表示并不是序列或者平面这种简单的排列，而是表现为更为复杂的图结构，如社交网络、商品-店铺-人之间的关系、分子结构等等
 
@@ -48,16 +48,16 @@ $$ h_v = f(x_v, x_{co[v]}, h_{ne[v]}, x_{ne[v]})$$
 
 对于关注节点的任务，可以直接拿$$h_v$$的表示去完成特定任务，而对于关注整个图的任务这可以通过将所有的节点的表示做Pooling或其他方法获得一个全局的表示信息然后去做相应的任务。
 
-## GNN分类--按更新方式分类
+### GNN分类--按更新方式分类
 
 ![GNN类别](/images/posts/gnn_survey/propegation.png)]
 如图所示，GNN主要分为图卷积网络(GCN)、基于注意力更新的图网络(GAT)、基于门控的更新的图网络、具有跳边的图网络。G
 
-## 各种GCN
+### 各种GCN
 
 图卷积网络是目前最主要（重要）的图网络，GCN按照更新方式又可以分为基于谱的和基于空间的。
 
-### 基于谱的GCN
+#### 基于谱的GCN
 
 我们常用的GCN模型长这样：
 
@@ -152,7 +152,7 @@ $$ g_{ \theta \star x} \approx \theta(I_N + D^{- \frac{1}{2} }AD^{- \frac{1}{2} 
 
 $$ I_n + D^{- \frac{1}{2} }AD^{- \frac{1}{2} } \rightarrow \tilde{D}^{- \frac{1}{2} }A \tilde{D}^{- \frac{1}{2} } , 其中 \tilde{A} = A + I_N, \tilde{D}_{ii} \sum_{j} \tilde{A}_{ij} $$
 
-### 非基于谱的方法
+#### 非基于谱的方法
 
 基于谱的方法需要学习的参数都是与Laplacian矩阵的特征向量和特征值相关的，即取决于图的结构，这样有什么问题呢，如果你在一个大图或者很多同构的小图上进行训练是可以的，这也有很多应用场景。但是如果我们要处理很多不同结构的图，那就不能用同一套参数来学习，不惧泛化性，比如我们对很多树结构的句子进行分类（比如表示为依存句法树或其他），每个句子的表示可能都不同，那就没办法用上面的方法做。
 
@@ -227,7 +227,7 @@ $$ h_v^t = (1-z_v^t) \odot h_v^{t-1} + z_v^t \odot \tilde{h_v^t}$$
 
 
 
-## GNN 训练方法
+### GNN 训练方法
 
 原始的GCN方法每个节点的表示依赖于图中所有的其他节点，计算复杂度过大，且由于依赖于拉普拉斯矩阵训练的网络不惧泛化性。
 
@@ -240,7 +240,7 @@ $$ q(v) \propto \frac{1}{| \mathcal{N}_v| } \sum_{u \in \mathcal{N}_v } \frac{1}
 还有一些限制感受野的其他方法，咱也不懂.
 
 
-## 通用框架
+### 通用框架
 
 *Message Passing*
 
@@ -298,7 +298,7 @@ $$ \bar{h^{'}} = \rho^{h \rightarrow u} (H^{'})$$
 
 最终返回全局节点、普通节点、边的表示，在该框架下的图任务可以是基于图的也可以是基于节点的还可以是基于边的。
 
-## ...
+### ...
 
 以后有时间再补充吧。如果有人看的话，有错误还请指出，共同进步.
 
