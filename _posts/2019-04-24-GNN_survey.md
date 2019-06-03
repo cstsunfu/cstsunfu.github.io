@@ -50,7 +50,7 @@ $$ h_v = f(x_v, x_{co[v]}, h_{ne[v]}, x_{ne[v]})$$
 
 ## GNN分类--按更新方式分类
 
-![GNN类别](/images/posts/gnn_survey/gnn.png)]
+![GNN类别](/images/posts/gnn_survey/propegation.png)]
 如图所示，GNN主要分为图卷积网络(GCN)、基于注意力更新的图网络(GAT)、基于门控的更新的图网络、具有跳边的图网络。
 
 ## 各种GCN
